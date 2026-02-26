@@ -88,10 +88,7 @@ def handle_userinput(user_question):
         st.session_state.chat_history = response['chat_history']
 
         for i, message in enumerate(st.session_state.chat_history):
-            if i % 2 == 0:
-                st.write(message.content)
-            else:
-                st.write(message.content)
+            st.write(message.content)
     else:
         st.write("Please upload documents and click process")
 
@@ -203,4 +200,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
